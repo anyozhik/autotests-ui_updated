@@ -12,8 +12,7 @@ def initialize_playwright_page(
 ) -> Page:
     browser = playwright[browser_type].launch(headless=settings.headless)
     context = browser.new_context(base_url=settings.get_base_url(),
-                                  storage_state=storage_state,
-                                  record_video_dir=settings.videos_dir)
+                                  storage_state=storage_state)
     context.tracing.start(screenshots=True, snapshots=True, sources=True)
     page = context.new_page()
     mock_static_resources(page)
@@ -24,4 +23,4 @@ def initialize_playwright_page(
     browser.close()
 
     allure.attach.file(settings.tracing_dir.joinpath(f'{test_name}.zip'), name='trace', extension='zip')
-    allure.attach.file(page.video.path(), name='video', attachment_type=allure.attachment_type.WEBM)
+
