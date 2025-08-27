@@ -32,7 +32,7 @@ jobs:
           pytest -m regression --alluredir=allure-results --numprocesses 2 
 
       - name: Get Allure history
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         if: always()
         continue-on-error: true
         with:
@@ -40,7 +40,7 @@ jobs:
           path: gh-pages
 
       - name: Generates Allure Report with history
-        uses: simple-elf/allure-report-action@v1.7
+        uses: simple-elf/allure-report-action@v2
         if: always()
         with:
           allure_results: allure-results
