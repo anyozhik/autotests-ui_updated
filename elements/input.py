@@ -15,7 +15,7 @@ class Input(BaseElement):
         return super().get_locator(nth, **kwargs).locator('input')
 
     def get_row_locator(self, nth: int = 0, **kwargs) -> str:
-        return f"{super().get_row_locator(nth, **kwargs)}//input"
+        return f"{super().get_raw_locator(nth, **kwargs)}//input"
 
     def fill(self, value: str, nth: int = 0, **kwargs):
         step = f'Fill {self.type_of} "{self.name}" with value {value}'

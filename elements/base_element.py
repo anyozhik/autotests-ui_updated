@@ -20,12 +20,12 @@ class BaseElement:
             logger.info(step)
             return self.page.get_by_test_id(locator).nth(nth)
 
-    def get_row_locator(self, nth: int = 0, **kwargs) -> str:
+    def get_raw_locator(self, nth: int = 0, **kwargs) -> str:
         return f"//*[@data-testid='{self.locator.format(**kwargs)}'][{nth + 1}]"
 
     def track_coverage(self, action_type: ActionType, nth: int = 0, **kwargs):
         tracker.track_coverage(
-            selector=self.get_row_locator(nth, **kwargs),
+            selector=self.get_raw_locator(nth, **kwargs),
             action_type=action_type,
             selector_type=SelectorType.XPATH
         )
