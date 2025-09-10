@@ -36,7 +36,7 @@ jobs:
         with:
           path: coverage-history.json
           key: coverage-history-${{ github.run_id }}
-          restore-key:
+          restore-keys:
             coverage-history-
 
       - name: Generate Coverage report
