@@ -1,0 +1,16 @@
+INFO     BASE_PAGE:base_page.py:17 Opening the url "AppRoute.LOGIN"
+INFO     BASE_ELEMENT:base_element.py:20 Getting locator with "data-testid=login-form-email-input" at index 0
+INFO     INPUT:input.py:25 Fill input "Email" with value user.name@gmail.com
+INFO     UI_COVERAGE_TRACKER_STORAGE:storage.py:34 Results directory does not exist, creating: /home/runner/work/autotests-ui_updated/autotests-ui_updated/coverage-results
+INFO     BASE_ELEMENT:base_element.py:20 Getting locator with "data-testid=login-form-email-input" at index 0
+INFO     INPUT:input.py:35 Checking that input "Email" has value user.name@gmail.com
+INFO     BASE_ELEMENT:base_element.py:20 Getting locator with "data-testid=login-form-password-input" at index 0
+INFO     INPUT:input.py:25 Fill input "Password" with value   
+INFO     BASE_ELEMENT:base_element.py:20 Getting locator with "data-testid=login-form-password-input" at index 0
+INFO     INPUT:input.py:35 Checking that input "Password" has value   
+INFO     BASE_ELEMENT:base_element.py:20 Getting locator with "data-testid=login-page-login-button" at index 0
+INFO     BASE_ELEMENT:base_element.py:38 Clicking button "Login"
+INFO     BASE_ELEMENT:base_element.py:20 Getting locator with "data-testid=login-page-wrong-email-or-password-alert" at index 0
+INFO     BASE_ELEMENT:base_element.py:48 Checking that text "Wrong email or password" is visible
+INFO     BASE_ELEMENT:base_element.py:20 Getting locator with "data-testid=login-page-wrong-email-or-password-alert" at index 0
+INFO     BASE_ELEMENT:base_element.py:57 Checking that text "Wrong email or password" has text "Wrong email or password"
