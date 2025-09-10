@@ -43,7 +43,7 @@ jobs:
         run: |
           ui-coverage-tool save-report
 
-      - name: Cache coverage history
+      - name: Cache Coverage history
         if: always()
         uses: actions/cache/save@v4
         with:
